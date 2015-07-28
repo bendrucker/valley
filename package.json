@@ -1,0 +1,35 @@
+{
+  "name": "valley",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Functional and lightweight data validation",
+  "license": "MIT",
+  "repository": "bendrucker/valley",
+  "author": {
+    "email": "bvdrucker@gmail.com",
+    "name": "Ben Drucker",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "data",
+    "validate",
+    "validation"
+  ],
+  "devDependencies": {
+    "standard": "^4.0.0",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "array-differ": "~1.0.0",
+    "assert-function": "~1.0.0",
+    "create-error-class": "~2.0.1",
+    "map-values": "~1.0.1",
+    "simple-format": "~1.0.0"
+  }
+}
