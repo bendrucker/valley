@@ -34,3 +34,11 @@ test('primitive', function (t) {
   t.equal(err.message, 'Invalid data in "foo": Expecting boolean, got string')
   t.end()
 })
+
+test('date', function (t) {
+  var validate = Validator({foo: Date})
+  t.notOk(validate({foo: new Date()}))
+  var err = validate({foo: '2015-01-01'})
+  t.equal(err.message, 'Invalid data in "foo": Expecting date, got string')
+  t.end()
+})

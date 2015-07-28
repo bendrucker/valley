@@ -38,6 +38,7 @@ function createValidator (validator) {
   if (validator === Boolean) return primitiveValidator('boolean')
   if (validator === String) return primitiveValidator('string')
   if (validator === Number) return primitiveValidator('number')
+  if (validator === Date) return isDate
   return validator
 }
 
@@ -45,4 +46,8 @@ function primitiveValidator (type) {
   return function isType (value) {
     return typeof value === type || new Error('Expecting ' + type + ', got ' + typeof value)
   }
+}
+
+function isDate (value) {
+  return value instanceof Date || new Error('Expecting date, got ' + typeof value)
 }
