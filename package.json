@@ -1,7 +1,7 @@
 {
   "name": "valley",
   "main": "index.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Functional and lightweight data validation",
   "license": "MIT",
   "repository": "bendrucker/valley",
