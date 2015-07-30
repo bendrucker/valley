@@ -17,6 +17,15 @@ test(function (t) {
   t.end()
 })
 
+test('bad input', function (t) {
+  var validate = Validator({})
+  var err = validate([])
+  t.ok(err)
+  t.equal(err.name, 'InvalidInputError')
+  t.equal(err.message, 'Invalid input: expected plain object, got Array')
+  t.end()
+})
+
 test('unknown key', function (t) {
   var validate = Validator({})
   var err = validate({foo: true})

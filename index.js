@@ -4,6 +4,8 @@ var mapValues = require('map-values')
 var difference = require('array-differ')
 var assertFunction = require('assert-function')
 var errors = require('./errors')
+var isPlainObject = require('is-plain-object')
+var InvalidInputError = errors.InvalidInputError
 var InvalidKeyError = errors.InvalidKeyError
 var InvalidValueError = errors.InvalidValueError
 
@@ -12,6 +14,9 @@ module.exports = Validator
 function Validator (config) {
   var validators = mapValues(config, createValidator)
   return function validate (data) {
+    if (!isPlainObject(data)) {
+      return new InvalidInputError(data)
+    }
     var keys = Object.keys(data)
     var unknowns = difference(keys, Object.keys(validators))
     if (unknowns.length) return new InvalidKeyError(unknowns)

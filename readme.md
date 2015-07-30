@@ -53,6 +53,8 @@ validatePost({
 
 #### `Validator(config)` -> `function`
 
+Creates a validator function that accepts a data object.
+
 ##### config
 
 *Required*  

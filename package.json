@@ -23,14 +23,16 @@
     "tape": "^4.0.0"
   },
   "files": [
-    "index.js",
-    "errors.js"
+    "errors.js",
+    "index.js"
   ],
   "dependencies": {
     "array-differ": "~1.0.0",
     "assert-function": "~1.0.0",
     "create-error-class": "~2.0.1",
+    "is-plain-object": "~2.0.1",
     "map-values": "~1.0.1",
-    "simple-format": "~1.0.0"
+    "simple-format": "~1.0.0",
+    "type-name": "~1.0.1"
   }
 }

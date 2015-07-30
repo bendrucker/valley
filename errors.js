@@ -2,6 +2,11 @@
 
 var createError = require('create-error-class')
 var format = require('simple-format')
+var typeName = require('type-name')
+
+exports.InvalidInputError = createError('InvalidInputError', function (input) {
+  this.message = 'Invalid input: expected plain object, got ' + typeName(input)
+})
 
 exports.InvalidKeyError = createError('InvalidKeyError', function (keys) {
   if (!Array.isArray(keys)) keys = [keys]
