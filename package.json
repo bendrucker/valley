@@ -23,7 +23,8 @@
     "tape": "^4.0.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "errors.js"
   ],
   "dependencies": {
     "array-differ": "~1.0.0",
