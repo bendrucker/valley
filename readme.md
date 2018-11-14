@@ -1,4 +1,4 @@
-# valley [![Build Status](https://travis-ci.org/bendrucker/valley.svg?branch=master)](https://travis-ci.org/bendrucker/valley)
+# valley [![Build Status](https://travis-ci.org/bendrucker/valley.svg?branch=master)](https://travis-ci.org/bendrucker/valley) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/valley.svg)](https://greenkeeper.io/)
 
 > Functional and lightweight data validation
 
