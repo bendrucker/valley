@@ -31,7 +31,7 @@ function Validator (config) {
         valid = false
       }
       if (!valid) {
-        return new InvalidValueError({key: key, value: value, cause: cause})
+        return new InvalidValueError({ key: key, value: value, cause: cause })
       }
     }
     return null
@@ -49,6 +49,7 @@ function createValidator (validator) {
 
 function primitiveValidator (type) {
   return function isType (value) {
+    /* eslint valid-typeof: "error" */
     return typeof value === type || new Error('Expecting ' + type + ', got ' + typeof value)
   }
 }

@@ -28,7 +28,7 @@ test('bad input', function (t) {
 
 test('unknown key', function (t) {
   var validate = Validator({})
-  var err = validate({foo: true})
+  var err = validate({ foo: true })
   t.ok(err)
   t.equal(err.name, 'InvalidKeyError')
   t.equal(err.message, 'The following keys are not allowed: foo')
@@ -36,18 +36,18 @@ test('unknown key', function (t) {
 })
 
 test('primitive', function (t) {
-  var validate = Validator({foo: Boolean})
-  t.notOk(validate({foo: true}))
-  t.notOk(validate({foo: false}))
-  var err = validate({foo: 'true'})
+  var validate = Validator({ foo: Boolean })
+  t.notOk(validate({ foo: true }))
+  t.notOk(validate({ foo: false }))
+  var err = validate({ foo: 'true' })
   t.equal(err.message, 'Invalid data in "foo": Expecting boolean, got string')
   t.end()
 })
 
 test('date', function (t) {
-  var validate = Validator({foo: Date})
-  t.notOk(validate({foo: new Date()}))
-  var err = validate({foo: '2015-01-01'})
+  var validate = Validator({ foo: Date })
+  t.notOk(validate({ foo: new Date() }))
+  var err = validate({ foo: '2015-01-01' })
   t.equal(err.message, 'Invalid data in "foo": Expecting date, got string')
   t.end()
 })
