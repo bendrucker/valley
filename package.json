@@ -27,7 +27,7 @@
     "index.js"
   ],
   "dependencies": {
-    "array-differ": "~2.1.0",
+    "array-differ": "~3.0.0",
     "assert-function": "~1.0.0",
     "create-error-class": "~3.0.2",
     "is-plain-object": "~2.0.1",
